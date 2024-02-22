@@ -1,0 +1,7 @@
+stack build
+stack run
+
+:split | terminal stack ghci
+:norm G
+:SendHere
+ss

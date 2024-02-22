@@ -1,0 +1,29 @@
+#resolver: lts-21.9
+resolver: lts-20.11
+
+# User packages to be built.
+# Various formats can be used as shown in the example below.
+#
+# packages:
+# - some-directory
+# - https://example.com/foo/bar/baz-0.0.2.tar.gz
+#   subdirs:
+#   - auto-update
+#   - wai
+packages:
+- .
+
+extra-deps:
+  - hashable-1.3.5.0
+  - rest-rewrite-0.4.1
+  - smtlib-backends-0.3
+  - smtlib-backends-process-0.3
+  - git: https://github.com/ucsd-progsys/liquidhaskell
+    commit: 369a7a63b97d313db4ea558f4847ebd3f82edce6
+    subdirs:
+      - .
+      - liquidhaskell-boot
+      - liquid-prelude
+      - liquid-vector
+  - git: https://github.com/ucsd-progsys/liquid-fixpoint
+    commit: dac1af46b0e582c1a3880051d4cd85b75315f909
